@@ -5,7 +5,10 @@ import PopupMenu from "./component/PopupMenu/PopupMenu";
 import Dropdown from "./component/Dropdown/Dropdown";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+
+  const [aboutDropdown, setAboutDropdown] = useState(false);
+  const [productDropdown, setProductDropdown] = useState(false);
 
   const client = [
     {
@@ -37,37 +40,45 @@ function App() {
 
   return (
     <div className="container">
-      {/*<header>*/}
-      {/*  <div className="logo-area">*/}
-      {/*    <img src="" className="App-logo" alt="logo" />*/}
-      {/*  </div>*/}
+      <header>
+        <div className="logo-area">
+          <img src="" className="App-logo" alt="logo" />
+        </div>
 
-      {/*  <nav className="navbar">*/}
-      {/*    <Dropdown menu="Sobre">*/}
-      {/*      <li><a href="#">Parceiros</a></li>*/}
-      {/*      <li><a href="#">Equipe</a></li>*/}
-      {/*      <li><a href="#">Projetos</a></li>*/}
-      {/*    </Dropdown>*/}
+        <nav className="navbar">
+          <Dropdown
+              menu="Home"
+          >
+            <li className="item"><a href="#">Parceiros</a></li>
+            <li className="item"><a href="#">Equipe</a></li>
+            <li className="item"><a href="#">Projetos</a></li>
+          </Dropdown>
 
-      {/*    <Dropdown menu="Sobre">*/}
-      {/*      <li><a href="#">Parceiros</a></li>*/}
-      {/*      <li><a href="#">Equipe</a></li>*/}
-      {/*      <li><a href="#">Projetos</a></li>*/}
-      {/*    </Dropdown>*/}
+          <Dropdown
+              menu="Produtos"
+          >
+            <li className="item"><a href="#">Parceiros</a></li>
+            <li className="item"><a href="#">Equipe</a></li>
+            <li className="item"><a href="#">Projetos</a></li>
+          </Dropdown>
 
-      {/*    <Dropdown menu="Sobre">*/}
-      {/*      <li><a href="#">Parceiros</a></li>*/}
-      {/*      <li><a href="#">Equipe</a></li>*/}
-      {/*      <li><a href="#">Projetos</a></li>*/}
-      {/*    </Dropdown>*/}
+          <Dropdown
+              menu="Sobre"
+          >
+            <li className="item"><a href="#">Parceiros</a></li>
+            <li className="item"><a href="#">Equipe</a></li>
+            <li className="item"><a href="#">Projetos</a></li>
+          </Dropdown>
 
-      {/*    <Dropdown menu="Sobre">*/}
-      {/*      <li><a href="#">Parceiros</a></li>*/}
-      {/*      <li><a href="#">Equipe</a></li>*/}
-      {/*      <li><a href="#">Projetos</a></li>*/}
-      {/*    </Dropdown>*/}
-      {/*  </nav>*/}
-      {/*</header>*/}
+          <Dropdown
+              menu="Contato"
+          >
+            <li className="item"><a href="#">Parceiros</a></li>
+            <li className="item"><a href="#">Equipe</a></li>
+            <li className="item"><a href="#">Projetos</a></li>
+          </Dropdown>
+        </nav>
+      </header>
 
       <table>
         <thead>
@@ -86,10 +97,10 @@ function App() {
 
               <td>
                 <PopupMenu>
-                  <li className="item"><a href={'#'}>Item 1</a></li>
-                  <li className="item"><a href={'#'}>Item 2</a></li>
-                  <li className="item"><a href={'#'}>Item 3</a></li>
-                  <li className="item"><a href={'#'}>Item 4</a></li>
+                  <li className="itemPopup"><a href={'#'}>Item 1</a></li>
+                  <li className="itemPopup"><a href={'#'}>Item 2</a></li>
+                  <li className="itemPopup"><a href={'#'}>Item 3</a></li>
+                  <li className="itemPopup"><a href={'#'}>Item 4</a></li>
                 </PopupMenu>
               </td>
             </tr>

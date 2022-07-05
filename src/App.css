@@ -161,14 +161,14 @@
 
 header {
   display: flex;
-  border: 1px solid blue;
+  background: var(--black-500);
+  padding: 0 1rem 0.5rem;
 }
 
 .navbar {
   width: 100%;
   display: flex;
   justify-content: center;
-  border: 1px solid green;
 }
 
 /*@media (prefers-reduced-motion: no-preference) {*/
