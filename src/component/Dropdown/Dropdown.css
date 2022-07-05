@@ -1,0 +1,129 @@
+li.content {
+  position: relative;
+  justify-content: flex-start;
+  background: var(--black-500)
+}
+
+.content + .content {
+  margin-left: 0.5rem;
+}
+
+.itemMenu {
+  padding: 0.5rem 1.5rem;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  border-radius: 0.5rem;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.itemMenu span {
+  display: flex;
+  align-items: center;
+}
+
+.itemMenu .icon {
+  margin-right: 0.4rem;
+  padding-bottom: 0.1rem;
+}
+
+
+.nav {
+  height: auto;
+}
+
+.list {
+  width: 100%;
+  height: 0;
+  padding: 0;
+  display: block;
+  position: absolute;
+  z-index: 99999999999;
+  top: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.1rem 0.2rem var(--black-800);
+  border-radius: 0.2rem;
+}
+
+.closeDropdown {
+  height: 0;
+  animation: closeDropdown 0.3s ease-in-out;
+}
+
+.openDropdown {
+  height: auto;
+  animation: openDropdown 0.3s ease-in-out;
+}
+
+@keyframes openDropdown {
+  0% {
+    height: 0;
+    transition: 1s;
+  }
+  100% {
+    height: 2.4rem;
+  }
+}
+
+@keyframes closeDropdown {
+  0% {
+    height: 2.4rem;
+    transition: 1s;
+  }
+
+  100% {
+    height: 0;
+  }
+}
+
+li.item {
+  display: block;
+  border: none;
+  background-color: var(--black-300);
+  padding: 0;
+
+  /* &::part */
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0 0 4px #999;
+  outline: none;
+
+  background-position: center;
+  transition: background 0.8s;
+
+  padding-inline-end: 0;
+  overflow:hidden;
+}
+
+
+li.item  + li.item  {
+  border-top: 1px dotted var(--orange-500);
+}
+
+li.item:hover {
+  background: var(--orange-50)
+  radial-gradient(circle, var(--orange-300) 0.9%, var(--orange-50) 1%)
+  center/15000%;
+}
+
+li.item:active {
+  background-color: var(--orange-700);
+  background-size: 90%;
+  transition: background 0s;
+}
+
+li.item a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 1rem;
+  color: white;
+}
