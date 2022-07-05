@@ -85,7 +85,7 @@
     }
 }
 
-li {
+li.itemPopup {
   display: block;
   border: none;
   background-color: var(--black-300);
@@ -110,23 +110,23 @@ li {
 }
 
 
-li  + li  {
+li.itemPopup  + li.itemPopup  {
   border-top: 1px dotted var(--orange-500);
 }
 
-li:hover {
+li.itemPopup:hover {
      background: var(--orange-50)
      radial-gradient(circle, var(--orange-300) 0.9%, var(--orange-50) 1%)
      center/15000%;
  }
 
-li:active {
+li.itemPopup:active {
      background-color: var(--orange-700);
      background-size: 90%;
      transition: background 0s;
  }
 
-li a {
+li.itemPopup a {
   display: inline-block;
   width: 100%;
   height: 100%;
